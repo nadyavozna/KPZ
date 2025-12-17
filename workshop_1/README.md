@@ -32,3 +32,8 @@ git reset для скасування проіндексованих змін.
 
 ## Скриншоти
 Всі кроки були зафіксовані за допомогою скріншотів, які знаходяться в папці screenshots.
+1. <img width="818" height="796" alt="image" src="https://github.com/user-attachments/assets/4c333c56-afae-48ba-ad80-ffea9f8065f0" />
+
+2. <img width="932" height="799" alt="image" src="https://github.com/user-attachments/assets/f05f0122-450b-459b-9b32-511d2e0c5424" />
+
+3. <img width="889" height="725" alt="image" src="https://github.com/user-attachments/assets/c139e996-31c8-438a-81d2-ff5df7711172" />
