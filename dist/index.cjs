@@ -30,21 +30,55 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var index_exports = {};
 __export(index_exports, {
+  Logger: () => Logger,
   add: () => add,
-  capitalize: () => capitalize
+  capitalize: () => capitalize,
+  config: () => config2,
+  formatNumber: () => formatNumber
 });
 module.exports = __toCommonJS(index_exports);
+
+// src/config.ts
 var dotenv = __toESM(require("dotenv"), 1);
+var import_zod = require("zod");
 dotenv.config();
+var schema = import_zod.z.object({
+  APP_PRECISION: import_zod.z.coerce.number().int().min(0).max(10).default(2),
+  LOG_LEVEL: import_zod.z.enum(["silent", "info", "debug"]).default("info")
+});
+var config2 = schema.parse(process.env);
+
+// src/index.ts
 function add(a, b) {
   return a + b;
 }
 function capitalize(s) {
-  if (!s) return "";
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
+function formatNumber(value, options) {
+  const precision = options?.precision ?? config2.APP_PRECISION;
+  return value.toFixed(precision);
+}
+var Logger = class {
+  constructor(level) {
+    this.level = level;
+  }
+  info(msg) {
+    if (this.level !== "silent") {
+      console.log("[INFO]", msg);
+    }
+  }
+  debug(msg) {
+    if (this.level === "debug") {
+      console.log("[DEBUG]", msg);
+    }
+  }
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  Logger,
   add,
-  capitalize
+  capitalize,
+  config,
+  formatNumber
 });
