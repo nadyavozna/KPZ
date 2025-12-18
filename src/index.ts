@@ -38,3 +38,6 @@ export class Logger {
     }
   }
 }
+
+// config тоже экспортируем напрямую
+export { config };
