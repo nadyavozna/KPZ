@@ -1,5 +1,4 @@
-import { add, capitalize, formatNumber, Logger, type LogLevel } from './index';
-import { config } from './config';
+import { add, capitalize, formatNumber, Logger, type LogLevel, config } from './index';
 
 console.log('sum(typed):', add(2, 3));
 console.log('capitalize(typed):', capitalize('hello'));
