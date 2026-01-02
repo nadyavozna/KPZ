@@ -88,9 +88,15 @@ LOG_LEVEL=debug
 ## Релізи
 
 [v0.1.0](https://github.com/nadyavozna/KPZ/releases/tag/v0.1.0)
+
 [v0.2.0](https://github.com/nadyavozna/KPZ/releases/tag/v0.2.0)
+
 [v0.3.0](https://github.com/nadyavozna/KPZ/releases/tag/v0.3.0)
+
 [v0.4.0](https://github.com/nadyavozna/KPZ/releases/tag/v0.4.0)
+
 [v0.5.0](https://github.com/nadyavozna/KPZ/releases/tag/v0.5.0)
+
 [v1.0.0](https://github.com/nadyavozna/KPZ/releases/tag/v1.0.0)
+
 [v2.0.0](https://github.com/nadyavozna/KPZ/releases/tag/v2.0.0)
